@@ -1,0 +1,40 @@
+/*****Tag*****/
+
+  body {
+    background-color: #8675a9;
+  }
+
+  hr {
+    border-style: dotted none none none;
+    width: 5%;
+    border-color: black;
+    border-width: 5px;
+  }
+
+  h1 {
+    color: #c3aed6;
+  }
+
+  h3 {
+    color: #efbbcf;
+  }
+
+  img:hover {
+    background-color: gold;
+  }
+
+/*****Class*****/
+
+.bacon {
+  background-color: black;
+}
+
+.veg {
+  background-color: white;
+}
+
+/*****Id*****/
+
+#heading {
+  color: blue;
+}
