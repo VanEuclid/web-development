@@ -1,25 +1,40 @@
-h1 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 3.5rem;
-  line-height: 1.5;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat-Bold', sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 h3 {
-  font-family: 'Montserrat-Bold', sans-serif;
   font-size: 1.5rem;
-  color: black;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat-Bold', sans-serif;
 }
 
 p {
   color: #8f8f8f;
 }
 
+.big-heading {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+#footer {
+  text-align: center;
+  padding: 7% 14%;
+}
+
 .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 15% 10%;
+}
+
+.btn-block {
+  width: 100%;
 }
 
 /* Navigation Bar */
@@ -47,20 +62,33 @@ p {
   margin: 5% 3% 5% 0;
 }
 
+/* Title */
+
 #title {
   background-color: #ff4c68;
   color: white;
 }
 
+.social-icon {
+  margin: 20px 10px;
+}
+
 /* Title Image */
 .title-image {
-  width: 60%;
+  width: 30%;
   transform: rotate(25deg);
+  position: absolute;
+  right: 20%;
 }
+
+/* Features */
 
 #features {
   /* margin: 100px auto 100px; */
   padding: 7% 15%;
+  background-color: white;
+  position: relative;
+  z-index: 1;
 }
 
 /* Feature Box */
@@ -80,11 +108,16 @@ p {
 }
 
 /* Testimonial Section */
+
 #testimonials {
   padding: 7% 15%;
   text-align: center;
   background-color: #ef8172;
   color: #fff;
+}
+
+.carousel-item {
+  padding: 5%;
 }
 
 .testimonial-image {
@@ -93,12 +126,13 @@ p {
   margin: 20px;
 }
 
+
 .testimonial-text {
   font-family: 'Montserrat-Bold', sans-serif;
-  font-size: 3rem;
-  line-height: 1.5;
+  font-size: 3rem;line-height: 1.5;
 }
 
+/* Press */
 #press {
   background-color: #ef8172;
   text-align: center;
@@ -107,5 +141,43 @@ p {
 
 .press-logo {
   width: 15%;
-  margin: 20px 20px 50px;
+  margin: 0 20px 50px;
+}
+
+/* Call to action */
+
+#cta {
+  background-color: #ff4c68;
+  text-align: center;
+  padding: 7% 15%;
+  color: white;
+}
+
+.cta-heading {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+/* Pricing */
+
+#pricing {
+  padding: 100px;
+  text-align: center;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+@media (max-width: 1028px) {
+  .title-image {
+    position: static;
+    transform: rotate(0);
+    width: 40%;
+  }
+
+  #title {
+    text-align: center;
+  }
 }
