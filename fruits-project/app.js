@@ -52,26 +52,57 @@ const fruitSchema = new mongoose.Schema({ //need to make objects in database
 
 const Fruit = mongoose.model("Fruit", fruitSchema); //auto plurals
 
-const fruit = new Fruit({
-  name: "Apple",
-  rating: 32,
-  review: "Pretty solid fruit"
-});
+// const apple = new Fruit({
+//   name: "Apple",
+//   rating: 10,
+//   review: "Pretty solid fruit"
+// });
 
 // fruit.save();
 
+// const banana = new Fruit({
+//   name: "Banana",
+//   rating: 7,
+//   review: "Pretty good for your taste"
+// });
+//
+// banana.save();
+
+const mango = new Fruit({
+  name: "Mango",
+  rating: 10,
+  review: "My personal favorite fruit"
+})
+
+mango.save();
+
 const personSchema = new mongoose.Schema({
   name: String,
-  age: Number
+  age: Number,
+  favFruit: fruitSchema //has to be the schema
 });
 
 const Person = mongoose.model("Person", personSchema);
 
-const person = new Person({
-  name: "Van",
-  age: 32
+// const person = new Person({
+//   name: "Van",
+//   age: 32
+// });
+
+Person.updateOne({name: "Van"}, {favFruit: mango}, (err) => {
+  if(err) {
+    console.log(err)
+  } else {
+    console.log("Successfully updated");
+  }
 });
 
+// const person = new Person({
+//   name: "Amy",
+//   age: 22,
+//   favFruit: banana
+// });
+//
 // person.save();
 
 // const kiwi = new Fruit({
