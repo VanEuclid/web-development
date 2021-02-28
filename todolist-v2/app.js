@@ -15,9 +15,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-// const items = ["Buy Food", "Cook Food", "Eat Food"];
-// const workItems = [];
-
 //this
 mongoose.connect("mongodb+srv://admin-van:unrYkHBzHi2Fj46x@cluster0.i2vv8.mongodb.net/todoListDB", {
   useNewUrlParser: true,
