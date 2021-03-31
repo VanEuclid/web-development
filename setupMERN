@@ -1,0 +1,12 @@
+npm init --y
+npm install --save-dev webpack
+make a .gitignore (node_modules)
+npm install --save-dev webpack-cli
+npm install --save-dev webpack-dev-server
+npm install --save-dev @babel/core
+npm install --save-dev @babel/node
+npm install --save-dev @babel/preset-env
+npm install --save-dev @babel/preset-react
+npm install --save-dev @babel/register
+
+follow video lots done

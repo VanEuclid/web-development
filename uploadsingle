@@ -1,0 +1,34 @@
+app.post("/careers", upload.single("resume"), (req, res) => {
+  // console.log(req.body.resume);
+  // console.log(_.replace(req.body.name, / /g, "")); //replace all white spaces
+
+  // console.log(req.file);
+  // console.log(req.body);
+
+  const applicantName = _.replace(req.body.name, / /g, "") + "-Resume.pdf";
+  // console.log(applicantName);
+
+  let mailOptions = {
+    from: "reachwellhh@yahoo.com",
+    to: "reachwellhh@yahoo.com",
+    subject: "NEW APPLICATION",
+    attachments: [
+      {
+        filename: applicantName,
+        path: req.file.path,
+        contentType: "application/pdf",
+      },
+    ],
+  };
+
+  // console.log(mailOptions);
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+      res.redirect("thank");
+    }
+  });
+});
